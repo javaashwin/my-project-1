@@ -17,9 +17,11 @@ jobs:
     steps:
     - name: Source code checkout
     - uses: actions/checkout@v2 
-    
     - name: List files
-      run: ls -R actions/checkout
+      run: |
+        ls -R actions/checkout
+    
+
         
 
     - name: Set up JDK 1.8
