@@ -17,9 +17,9 @@ jobs:
     steps:
     - name: Source code checkout
     - uses: actions/checkout@v2 
-    - name: List files
-      run: |
-        ls -R actions/checkout
+    - name: list files
+    - run: ls
+      
     
 
         
