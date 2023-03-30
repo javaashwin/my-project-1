@@ -22,7 +22,7 @@ jobs:
           sudo mkdir -p iasp_cicd
           cd iasp_cicd
           sudo mkdir -p appcode
-          sudo cp -r $GITHUB_WORKSPACE ./appcode
+          sudo cp -r /home/runner/work/my-project-1/my-project-1/. ./appcode
           ls ./appcode
           cd ./appcode
           zip -r sourcecode.zip ./*
