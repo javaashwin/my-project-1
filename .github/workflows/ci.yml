@@ -27,5 +27,6 @@ jobs:
           zip -r sourcecode.zip ./*
           cd ..
           ls .
+          echo "testing"
           
 
