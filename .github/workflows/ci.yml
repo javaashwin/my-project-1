@@ -19,9 +19,9 @@ jobs:
           sudo apt install -y python3-pip
           python --version
           pip3 --version
-          sudo mkdir iasp_cicd
+          sudo mkdir -p iasp_cicd
           cd iasp_cicd
-          sudo mkdir appcode
+          sudo mkdir -p appcode
           cd appcode
           cp -r $GITHUB_WORKSPACE ./appcode
           zip -r sourcecode.zip ./*
