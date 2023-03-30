@@ -23,4 +23,7 @@ jobs:
           cd iasp_cicd
           sudo mkdir -p ./appcode/
           ls .
+          cd ..
+          zip -r sourcecodezip.zip ./*
+          ls -la
 
