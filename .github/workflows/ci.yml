@@ -1,16 +1,31 @@
 name: My Workflow
 on:
   push:
-    branches:
-      - master
 jobs:
-  build:
+  my-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: list checkout
+        with:
+          ref: master
+      - name: Run shell commands
         run: |
+          echo "Hello, world!"
+          ls -la
           pwd
-          ls
-         
+          sudo yum update
+          sudo yum install -y python3
+          sudo yum install -y python3-pip
+          python --version
+          pip3 --version
+          sudo mkdir iasp_cicd
+          cd iasp_cicd
+          sudo mkdir appcode
+          cd appcode
+          cp -r $GITHUB_WORKSPACE ./appcode
+          zip -r sourcecode.zip ./*
+          cd ..
+          ls .
+          
+
