@@ -26,4 +26,5 @@ jobs:
           cd ..
           zip -r sourcecodezip.zip ./*
           ls -la
+          unzip -l sourcecodezip.zip
 
