@@ -25,7 +25,7 @@ jobs:
           sudo mkdir -p appcode
           cd ..
           pwd
-          sudo cp -R . /home/runner/work/my-project-1/my-project-1/iasp_cicd/appcode 
+          sudo rsync -av --progress /home/runner/work/my-project-1/my-project-1/* /home/runner/work/my-project-1/my-project-1/iasp_cicd --exclude iasp_cicd 
           ls .
           zip -r sourcecodezip.zip appcode/
           ls .
