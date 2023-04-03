@@ -26,8 +26,7 @@ jobs:
           cd ..
           pwd
           sudo rsync -av --progress /home/runner/work/my-project-1/my-project-1/* /home/runner/work/my-project-1/my-project-1/iasp_cicd --exclude iasp_cicd 
-          ls .
-          zip -r sourcecodezip.zip appcode/
+          cd iasp_cicd
           ls .
           
 
