@@ -23,7 +23,7 @@ jobs:
           cd iasp_cicd
           sudo mkdir -p ./appcode/
           cd appcode
-          cp /home/runner/work/my-project-1/my-project-1 . 
+          cp -R /home/runner/work/my-project-1/my-project-1 . 
           ls .
           cd ..
           zip -r sourcecodezip.zip appcode/
