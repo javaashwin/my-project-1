@@ -26,7 +26,9 @@ jobs:
         path: iasp_cicd
     - name: source code zip of client 
       run: |
-          cd iasp_cicd/appcode
+          ls .
+          cd iasp_cicd
+          cd appcode
           zip -r clientsourcecode.zip  appcode/
           ls .
           cd ..
