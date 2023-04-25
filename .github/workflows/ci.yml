@@ -14,6 +14,7 @@ jobs:
          cd iasp_cicd
          mkdir appcode
          cd ..
+         ls -l
     - name: Checkout client sourcecode
       uses: actions/checkout@v3
       with:
@@ -28,6 +29,7 @@ jobs:
       run: |
           ls .
           cd iasp_cicd
+          ls .
           cd appcode
           zip -r clientsourcecode.zip  appcode/
           ls .
