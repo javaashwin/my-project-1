@@ -10,7 +10,10 @@ jobs:
    steps:
     - name: Directory Creation 
       run: |
-         mkdir iasp_cicd && mkdir iasp_cicd/appcode
+         mkdir iasp_cicd
+         cd iasp_cicd
+         mkdir appcode
+         cd ..
     - name: Checkout client sourcecode
       uses: actions/checkout@v3
       with:
@@ -23,10 +26,10 @@ jobs:
         path: iasp_cicd
     - name: source code zip of client 
       run: |
-          ls iasp_cicd/appcode
-          zip -r clientsourcecode.zip  iasp_cicd/appcode/
+          cd iasp_cicd/appcode
+          zip -r clientsourcecode.zip  appcode/
           ls .
-          cd iasp_cicd
+          cd ..
           ls .
       
     
