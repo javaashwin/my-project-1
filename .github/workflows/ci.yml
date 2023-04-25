@@ -11,6 +11,7 @@ jobs:
     - name: Directory Creation 
       run: |
          mkdir iasp_cicd && mkdir iasp_cicd/appcode
+         ls .
          cd iasp_cicd
          ls .
          cd ..
