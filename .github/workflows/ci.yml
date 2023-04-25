@@ -24,6 +24,8 @@ jobs:
          pwd
          cd iasp_cicd
          ls .     
+         cd appcode
+         ls .
     - name: iasp code fetch
       uses: actions/checkout@v3
       with:
