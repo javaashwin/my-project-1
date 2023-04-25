@@ -16,5 +16,8 @@ jobs:
           git clone -b develop https://github.com/javaashwin/WebGoat.git
           ls .
           cd ..
-          ls $GITHUB_WORKSPACE
+          ls .
+          cd $GITHUB_WORKSPACE
+          ls .
+
 
