@@ -1,4 +1,4 @@
-name: unniks
+name: test
 
 on:
   push:
@@ -10,23 +10,11 @@ jobs:
     steps:
       - name: Directory Creation 
         run: |
-          mkdir iasp_cicd && mkdir iasp_cicd/appcode
-      - name: Checkout client sourcecode
-        uses: actions/checkout@v3
-        with:
-         path: iasp_cicd/appcode
-     # - name: Checkout python(iasp) sourcecode
-     #   uses: actions/checkout@v3
-     #   with:
-     #    repository: my-org/my-tools  # repository name  , a seperate repository to be created for our iasp
-     #   path: iasp_cicd
-      - name: source code zip of client 
-        run: |
-          ls iasp_cicd/appcode
-          zip -r clientsourcecode.zip  iasp_cicd/appcode/
           ls .
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.2
-        with:
-         name: clientsourcecode.zip
-         path: ${{ github.workspace }}
+          mkdir iasp_cicd && mkdir iasp_cicd/appcode
+          cd iasp_cicd
+          git clone -b develop https://github.com/javaashwin/WebGoat.git
+          ls .
+          cd ..
+          ls $GITHUB_WORKSPACE
+
