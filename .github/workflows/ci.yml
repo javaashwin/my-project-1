@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Directory Creation 
         run: |
+          #!/bin/bash
           ls .
 
 
