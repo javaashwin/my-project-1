@@ -10,11 +10,12 @@ jobs:
    steps:
     - name: Directory Creation 
       run: |
-         mkdir iasp_cicd && mkdir iasp_cicd/appcode
-         ls .
+         mkdir iasp_cicd
          cd iasp_cicd
+         mkdir appcode
          ls .
          cd ..
+         ls .
     - name: Checkout client sourcecode
       uses: actions/checkout@v3
       with:
