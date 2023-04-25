@@ -11,13 +11,5 @@ jobs:
       - name: Directory Creation 
         run: |
           ls .
-          mkdir iasp_cicd && mkdir iasp_cicd/appcode
-          cd iasp_cicd
-          git clone -b develop https://github.com/javaashwin/WebGoat.git
-          ls .
-          cd ..
-          ls .
-          cd $GITHUB_WORKSPACE
-          ls .
 
 
