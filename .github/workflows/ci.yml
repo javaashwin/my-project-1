@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Directory Creation 
         run: |
-          #!/bin/bash
+          echo "testing code"
           ls .
 
 
