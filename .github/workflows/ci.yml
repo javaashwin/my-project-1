@@ -39,7 +39,6 @@ jobs:
       run: |
          cd ~
          cd / 
-         ls .
          cd iasp_cicd
          ls .
          ls ./appcode
