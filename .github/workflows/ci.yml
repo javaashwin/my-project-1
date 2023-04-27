@@ -42,6 +42,9 @@ jobs:
          cd iasp_cicd
          sudo git clone -b develop https://github.com/javaashwin/WebGoat.git
          ls .
+         cd WebGoat
+         ls .
+         cd ..
          sudo zip -r clientsourcecode.zip  appcode/
          cd appcode
          ls .
