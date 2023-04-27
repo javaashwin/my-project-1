@@ -29,19 +29,20 @@ jobs:
          ls .     
          cd appcode
          ls .
-    - name: iasp code fetch
-      uses: actions/checkout@v3
-      with:
-        ref: develop
-        repository: javaashwin/WebGoat
-        path: iasp_cicd
+  #  - name: iasp code fetch
+  #    uses: actions/checkout@v3
+  #    with:
+  #      ref: develop
+   #     repository: javaashwin/WebGoat
+   #     path: iasp_cicd
     - name: source code zip of client 
       run: |
          cd ~
          cd / 
          cd iasp_cicd
+         git clone -b develop https://github.com/javaashwin/WebGoat.git
          ls .
-         ls ./appcode
+         cd appcode
          ls .
          sudo zip -r clientsourcecode.zip  appcode/
          cd appcode
