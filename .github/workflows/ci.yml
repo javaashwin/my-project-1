@@ -10,6 +10,8 @@ jobs:
    steps:
     - name: Directory Creation 
       run: |
+         cd ~
+         cd /
          mkdir iasp_cicd
          cd iasp_cicd
          mkdir appcode
