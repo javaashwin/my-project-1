@@ -38,8 +38,9 @@ jobs:
           pwd
           ls .
           cd iasp_cicd
+          cd appcode
           ls .
-          zip -r clientsourcecode.zip  /home/runner/work/my-project-1/my-project-1/iasp_cicd/appcode
+          zip -r clientsourcecode.zip  appcode/
       
     
 
