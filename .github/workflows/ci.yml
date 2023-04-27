@@ -12,9 +12,9 @@ jobs:
       run: |
          cd ~
          cd /
-         mkdir iasp_cicd
+         sudo mkdir iasp_cicd
          cd iasp_cicd
-         mkdir appcode
+         sudo mkdir appcode
          ls .
          cd ..
          ls .
