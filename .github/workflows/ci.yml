@@ -44,7 +44,7 @@ jobs:
          ls .
          ls ./appcode
          ls .
-         zip -r clientsourcecode.zip  appcode/
+         sudo zip -r clientsourcecode.zip  appcode/
       
     
 
