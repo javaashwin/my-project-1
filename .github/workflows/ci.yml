@@ -42,9 +42,9 @@ jobs:
          ls .
          cd iasp_cicd
          ls .
-         cd appcode
+         ls ./appcode
          ls .
-         zip -r clientsourcecode.zip  appcode
+         zip -r clientsourcecode.zip  appcode/
       
     
 
