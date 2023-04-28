@@ -51,6 +51,11 @@ jobs:
          ls .
          cd ..
          sudo zip -r clientsourcecode.zip appcode/my-project-1
+         ls .
+         cd appcode
+         ls .
+         cd my-project-1
+         ls .
          
        #  ls .
         # cd ..
