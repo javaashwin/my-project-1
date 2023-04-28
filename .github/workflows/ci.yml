@@ -8,27 +8,27 @@ jobs:
  name-of-job:
    runs-on: ubuntu-latest
    steps:
-    - name: Directory Creation 
-      run: |
-         cd ~
-         cd /
-         sudo mkdir iasp_cicd
-         cd iasp_cicd
-         sudo mkdir appcode
-         ls .
-         cd ..
-         ls .
-    - name: Checkout client sourcecode
-      uses: actions/checkout@v3
-      with:
-       path: iasp_cicd/appcode
-    - name: checking if source coode is checked out in appcode folder
-      run: |
-         pwd
-         cd iasp_cicd
-         ls .     
-         cd appcode
-         ls .
+    #- name: Directory Creation 
+      # run: |
+        # cd ~
+         # cd /
+        # sudo mkdir iasp_cicd
+        # cd iasp_cicd
+        # sudo mkdir appcode
+       #  ls .
+      #   cd ..
+     #    ls .
+    #- name: Checkout client sourcecode
+     # uses: actions/checkout@v3
+     # with:
+       #path: iasp_cicd/appcode
+  #  - name: checking if source coode is checked out in appcode folder
+   #   run: |
+    #     pwd
+     #    cd iasp_cicd
+      #   ls .     
+       ##  cd appcode
+         #ls .
   #  - name: iasp code fetch
   #    uses: actions/checkout@v3
   #    with:
@@ -39,15 +39,21 @@ jobs:
       run: |
          cd ~
          cd / 
+         sudo mkdir iasp_cicd
          cd iasp_cicd
          sudo git clone -b develop https://github.com/javaashwin/WebGoat.git
          ls .
-         cd WebGoat
+         sudo mkdir appcode
+         cd appcode
+         sudo git clone -b master https://github.com/javaashwin/my-project-1.git
          ls .
          cd ..
-         zip -r clientsourcecode.zip  appcode/
-         cd appcode
-         ls .
+         
+       #  ls .
+        # cd ..
+        # zip -r clientsourcecode.zip  appcode/
+        # cd appcode
+        # ls .
       
     
 
