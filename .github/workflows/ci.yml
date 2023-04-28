@@ -50,7 +50,7 @@ jobs:
          sudo git clone -b master https://github.com/javaashwin/my-project-1.git
          ls .
          cd ..
-         zip -r clientsourcecode.zip appcode/my-project-1
+         sudo zip -r clientsourcecode.zip appcode/my-project-1
          
        #  ls .
         # cd ..
