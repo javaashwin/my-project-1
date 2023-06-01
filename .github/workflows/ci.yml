@@ -26,6 +26,7 @@ jobs:
         with:
           ref: develop
           path: branch1/branch2
+        
 
       # Perform actions specific to branch 2
       - name: Run Tests on Branch 2
@@ -35,6 +36,9 @@ jobs:
       - name: Zip Branch2
         run: |
           cd branch1
+          cd branch2
+          ls .
+          cd ..
           zip -r branch2.zip branch2
       - name: Get Zip File Path
         run: |
