@@ -1,68 +1,42 @@
-name: test
+name: Checkout Branches
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - '*'
 
 jobs:
- name-of-job:
-   runs-on: ubuntu-latest
-   steps:
-    #- name: Directory Creation 
-      # run: |
-        # cd ~
-         # cd /
-        # sudo mkdir iasp_cicd
-        # cd iasp_cicd
-        # sudo mkdir appcode
-       #  ls .
-      #   cd ..
-     #    ls .
-    #- name: Checkout client sourcecode
-     # uses: actions/checkout@v3
-     # with:
-       #path: iasp_cicd/appcode
-  #  - name: checking if source coode is checked out in appcode folder
-   #   run: |
-    #     pwd
-     #    cd iasp_cicd
-      #   ls .     
-       ##  cd appcode
-         #ls .
-  #  - name: iasp code fetch
-  #    uses: actions/checkout@v3
-  #    with:
-  #      ref: develop
-   #     repository: javaashwin/WebGoat
-   #     path: iasp_cicd
-    - name: source code zip of client 
-      run: |
-         cd ~
-         cd / 
-         sudo mkdir iasp_cicd
-         cd iasp_cicd
-         sudo git clone -b develop https://github.com/javaashwin/WebGoat.git
-         ls .
-         cd WebGoat
-         ls .
-         sudo mkdir appcode
-         cd appcode
-         sudo git clone -b master https://github.com/javaashwin/my-project-1.git
-         ls .
-         cd ..
-         sudo zip -r clientsourcecode.zip appcode/my-project-1
-         ls .
-         cd appcode
-         ls .
-         cd my-project-1
-         ls .
-         
-       #  ls .
-        # cd ..
-        # zip -r clientsourcecode.zip  appcode/
-        # cd appcode
-        # ls .
-      
-    
+  build:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout Branch 1
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: branch1
+
+      # Perform actions specific to branch 1
+      - name: Run Tests on Branch 1
+        run: |
+          echo "The path of code from branch 1 is: ${{ github.workspace }}/branch1"
+
+      - name: Checkout Branch 2
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+          path: branch1/branch2
+
+      # Perform actions specific to branch 2
+      - name: Run Tests on Branch 2
+        run: |
+          echo "The path of code from branch 2 is: ${{ github.workspace }}/branch1/branch2"
+          
+      - name: Zip Branch2
+        run: |
+          cd branch1
+          zip -r branch2.zip branch2
+      - name: Get Zip File Path
+        run: |
+          echo "The path of the zip file is: ${{ github.workspace }}/branch1/branch2.zip"
 
