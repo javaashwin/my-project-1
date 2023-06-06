@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "The path of code from branch 1 is: ${{ github.workspace }}/branch1"
 
-      - name: Checkout Branch 2
+      - name: Checkout client sourcecode inside appcode folder
         uses: actions/checkout@v2
         with:
           ref: develop
