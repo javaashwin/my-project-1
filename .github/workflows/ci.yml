@@ -46,7 +46,7 @@ jobs:
           
       - name: Get file path
         run: |
-          export FILEPATH = ${{ github.workspace }}/iasp_cicd/clientsourcecode.zip
+          export FILEPATH="${{ github.workspace }}/iasp_cicd/clientsourcecode.zip"
           echo "$FILEPATH"
           
           
