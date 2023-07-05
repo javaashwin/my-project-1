@@ -48,7 +48,7 @@ jobs:
         run: |
           export FILEPATH="${{ github.workspace }}/iasp_cicd/clientsourcecode.zip"
           echo "$FILEPATH"
-          export clientid = ${{ secrets.CLIENT_IDD }}
+          export clientid= "${{ secrets.CLIENT_IDD }}"
           echo "clientid is ${{ secrets.CLIENT_IDD }}"
           
           
